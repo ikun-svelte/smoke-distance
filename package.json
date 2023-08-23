@@ -1,0 +1,87 @@
+{
+  "name": "smoke-distance",
+  "description": "",
+  "private": false,
+  "type": "module",
+  "version": "1.0.0",
+  "packageManager": "pnpm@8.6.12",
+  "keywords": [
+    "estree",
+    "ast",
+    "typescript",
+    "vue",
+    "react"
+  ],
+  "license": "MIT",
+  "author": "baiwusanyu-c",
+  "homepage": "https://github.com/ikun-svelte/smoke-distance",
+  "repository": "https://github.com/ikun-svelte/smoke-distance",
+  "bugs": "https://github.com/ikun-svelte/smoke-distance/issues",
+  "main": "./index.js",
+  "module": "./index.js",
+  "types": "./index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "require": "./index.cjs",
+      "import": "./index.js"
+    }
+  },
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./*",
+        "./index.d.ts"
+      ]
+    }
+  },
+  "scripts": {
+    "init": "pnpm i",
+    "lint:fix": "eslint --fix ./ --ext .vue,.js,.ts,.jsx,.tsx,.json ",
+    "dev": "",
+    "build": "",
+    "play": "",
+    "release": "bumpp package.json --commit --push --tag",
+    "clean": "rimraf dist",
+    "prepare": "npx simple-git-hooks",
+    "test": "vitest",
+    "test:update": "vitest -u",
+    "test:coverage": "vitest --coverage",
+    "update:deps": "npx taze major -w && pnpm run init"
+  },
+  "peerDependencies": {},
+  "dependencies": {},
+  "devDependencies": {
+    "@baiwusanyu/eslint-config": "^1.0.15",
+    "@types/fs-extra": "^11.0.1",
+    "@types/node": "^18.17.8",
+    "@vitest/coverage-c8": "^0.33.0",
+    "@vitest/ui": "^0.34.2",
+    "bumpp": "^9.2.0",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.47.0",
+    "esno": "^0.17.0",
+    "jsdom": "^22.1.0",
+    "lint-staged": "^14.0.1",
+    "rimraf": "^5.0.1",
+    "simple-git-hooks": "^2.9.0",
+    "sucrase": "^3.34.0",
+    "tsup": "^7.2.0",
+    "typescript": "^5.1.6",
+    "vitest": "^0.34.2"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged",
+    "commit-msg": "node vertify-commit.js"
+  },
+  "lint-staged": {
+    "*.{vue,js,ts,jsx,tsx,md,json}": [
+      "eslint ./ --fix"
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "@baiwusanyu"
+    ]
+  }
+}
