@@ -34,3 +34,5 @@ const smoke = new SmokeDistance({
 });
 smoke.start();
 ```
+## Thanks
+[b-tween](https://github.com/PengJiyuan/b-tween)
