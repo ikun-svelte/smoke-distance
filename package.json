@@ -3,7 +3,7 @@
   "description": "tweening engine for Typescript",
   "private": false,
   "type": "module",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "packageManager": "pnpm@8.6.12",
   "keywords": [
     "easing",
